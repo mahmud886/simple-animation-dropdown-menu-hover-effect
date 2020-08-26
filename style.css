@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.header{
+    background-color: green;
+    
+}
+.header ul{
+    text-align: center;
+}
+.header ul li{
+    display: inline-block;
+    
+}
+.header ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 15px 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: .5s;
+    border-right: 1px solid white;
+    margin-left: -10px;
+    
+}
+.header ul :first-child a{
+    border-left: 1px solid white;
+}
+.header ul li:hover > a{
+    background: red;
+}
+
+
+/* Dropdown Menu */
+
+.header ul li{
+    position: relative;
+}
+
+.header ul li ul{
+    position: absolute;
+    top: 100%;
+    left: -10px;
+    width: 246px;
+    background-color: green;
+    border-top: 1px solid white;
+
+}
+.header ul li ul li{
+    display: block;
+    margin-left: 10px;
+    
+    
+}
+.header ul li ul li a{
+    display: block;
+    border: none;
+    border-bottom: 1px solid white;
+
+}
+.header ul li ul li:first-child a{
+    border-left: none;
+}
+
+
+/* Hover Effect Dropdown Menu */
+.header ul li ul{
+    transition: .5s;
+    opacity: 0;
+    visibility: hidden;
+    transform: scaleY(0);
+    transform-origin: top center;
+}
+
+.header ul li:hover ul{
+    transform: scaleY(1);
+    visibility: visible;
+    opacity: 1;
+
+}
